@@ -47,4 +47,30 @@ DELETE ->
 ("Quero excluir apenas os registros que atendam a uma condição relacionada à coluna nome.")
 (O LIKE é usado para fazer comparações com padrões de texto.)
 ( % = Funciona como um curinga que representa qualquer sequência de caracteres. Ex: Ana Silvia, Ana Souza, Ana Maria, Ana Paula)
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+UPDATE->
+
+*Sintaxe
+
+    UPDATE <nome_tabela>  
+	SET <coluna1>=<valor1>,... <colunaN>=<valorN> 
+	[WHERE <CONDIÇÃO>]
+
+*Altera o nome de todos da tabela*
+
+    UPDATE cliente
+    SET telefone = 11987654321;
+
+*Corrigir o telefone de um cliente específico, onde tem o cpf ..., a variavel telefone vai ser substituida pelo num de telefone*
+
+    UPDATE cliente 
+    SET telefone = 47988776655 
+    WHERE cpf = '222.222.222-22';
+
+*Atualizar múltiplos dados de um cliente de uma só vez, onde tem o cpf ..., as variaveis nome e telefone vão ser substituidas pelos novos valores*
+
+    UPDATE cliente 
+    SET nome = 'Ricardo Alves', telefone = 11976543210 
+    WHERE cpf = '555.555.555-55';
 */
