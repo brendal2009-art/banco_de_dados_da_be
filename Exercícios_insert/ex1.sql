@@ -82,7 +82,7 @@ VALUES ('444.444.444-44', 1, 20);
 
 -- QUESTÃO 9
 
-INSERT INTO projEmp (cpfEmpregado, codProj, hr-- =====================================================Trab)
+INSERT INTO projEmp (cpfEmpregado, codProj, hrTrab)
 VALUES ('333.333.333-33', 2, 35);
 
 -- QUESTÃO 10
