@@ -73,4 +73,9 @@ UPDATE->
     UPDATE cliente 
     SET nome = 'Ricardo Alves', telefone = 11976543210 
     WHERE cpf = '555.555.555-55';
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+SELECT ->
+
+OFFSET = Serve para pular um número específico de registros antes de começar a retornar os resultados. Ex: `SELECT * FROM cliente LIMIT 5 OFFSET 10;` (Pula os 10 primeiros registros e retorna os próximos 5.)
 */
