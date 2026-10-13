@@ -55,21 +55,3 @@ FROM produtos p
 LEFT JOIN categorias c
     ON p.idCategoria_fk = c.idCategoria
 WHERE c.idCategoria IS NULL; -- apenas os produtos que não têm correspondência na tabela categorias, aqueles que não têm categoria cadastrada.
-
--- Exercícios com RIGHT JOIN (Foco nas Categorias) --
-
--- 7 - Listar TODAS as Categorias: Mostre o nome de todas as categorias e, ao lado, o nome dos produtos que pertencem a ela. Se uma categoria não tiver produtos, ela ainda deve aparecer.
-SELECT
-    c.nome AS Categoria,
-    p.nome AS Produto
-FROM produtos p
-RIGHT JOIN categorias c
-    ON p.idCategoria_fk = c.idCategoria;
-
--- 8 - Encontrar Categorias VAZIAS: Usando o RIGHT JOIN, mostre o nome apenas das categorias que não possuem nenhum produto cadastrado. (Dica: No script, todas as categorias têm produtos, mas se você inserir uma categoria nova, como 'Drones', essa consulta a encontraria).
-SELECT
-    c.nome AS `Categoria`
-FROM categorias c
-RIGHT JOIN produtos p
-    ON c.idCategoria = p.idCategoria_fk
-WHERE p.idProduto IS NULL; -- apenas as categorias que não têm correspondência na tabela produtos
